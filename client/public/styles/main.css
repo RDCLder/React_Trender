@@ -1,0 +1,1446 @@
+body {
+    background-image: linear-gradient(to right,#C1C8E4, rgb(215, 232, 238));
+    /* background-color: #C1C8E4; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #3A66A7;
+    color: white;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebarCollapse {
+    color: white;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #3A66A7;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 4;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #3A66A7;
+    color: white;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #3A66A7;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #3A66A7;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-right: 30px !important;
+    background: #3A66A7;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article,
+a.article:hover {
+    background: #3A66A7 !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    NAVBAR STYLE
+----------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(90deg,#8860D0, #84CEEB, #5AB9EA);
+    color: white;
+    z-index: 2;
+}
+#userNavbarDropdown {
+    background-color: transparent;
+    color: white;
+}
+#userNavbarDropdownList {
+    margin-top: 10px;
+}
+
+.navbarRow {
+    /* height: 100%; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarCol {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* border: solid red; */
+}
+
+#trenderLogo {
+    width: 6vw;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0s;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#registerButton {
+    border: #4B8AE5;
+    border-width: thin; 
+    color:#4B8AE5;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #4B8AE5;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    FLOATING BUTTONS
+----------------------------------------------------- */
+
+.label-container {
+	position:fixed;
+	bottom:48px;
+	right:105px;
+	display:table;
+	visibility: hidden;
+}
+
+.label-text {
+	color:#FFF;
+	background: #B1C9EF;
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+}
+
+.label-arrow {
+	display:table-cell;
+	vertical-align:middle;
+	color:#B1C9EF;
+	opacity:0.5;
+}
+
+.floatButton {
+    color:#FFF;
+	position:fixed;
+	right: 5vh;
+    width: 10vh;
+	height: 10vh;
+	border-radius: 5vh;
+	text-align:center;
+    box-shadow: 0.5vh 0.5vh 1vh #999;
+    z-index: 2;
+}
+
+#searchButton {
+	bottom: 27vh;
+}
+
+.sidebarButton {
+	bottom: 16vh;
+}
+
+#homeButton {
+	bottom: 5vh;
+}
+
+.my-float {
+	font-size:24px;
+}
+
+/* #homeButton + div.homeLabel {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+#homeButton:hover + div.homeLabel {
+  visibility: visible;
+  opacity: 1;
+} */
+
+/* ---------------------------------------------------
+    MAIN CONTENT
+----------------------------------------------------- */
+
+.container {
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    /* border: solid orange; */
+}
+
+.row {
+    display: flex;
+    height: 10%;
+    /* border: solid blue; */
+    margin: 0;
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    height: auto;
+    /* border: solid green; */
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    display: block;
+}
+
+#dashboardCard {
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+#communityCard {
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+.communityBody {
+    margin-bottom: 2%;
+    padding: 0;
+    padding-top: 2%;
+    padding-left: 5%;
+    /* border: solid orange; */
+    /* border-bottom: solid #DDDDDD; */
+    /* border-width: thin; */
+}
+
+/* .communitySide {
+    border: solid orange;
+} */
+
+.card {
+    /* filter: drop-shadow(0 0 0.3rem grey); */
+    box-shadow: 0.5vh 0.5vh 1vh #999;
+}
+
+.topicTextPreview {
+    max-height: 300px;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+.topicMediaPreview {
+    height: auto;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid #DDDDDD;
+    border-width: thin;
+}
+
+.card-header {
+    color: white; 
+    background-image: linear-gradient(90deg, #5680E9,#C1C8E4);
+    /* border: solid orange; */
+}
+
+.card-body {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+    /* border: solid #3A66A7; */
+}
+
+.textBody {
+    /* height: auto; */
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: solid red; */
+}
+
+.commentBody {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2%;
+    /* border: solid orange; */
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 2vh;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    font-family: 'Poppins', sans-serif;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+textarea {
+    -moz-tab-size:    4;
+    -o-tab-size:      4;
+    tab-size:         4;
+}
+
+.card-side {
+    display: flex;
+    flex-direction: column;
+    background-color: #D9E8FB;
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+}
+
+.reactionIcon {
+    width: 3vw;
+    /* margin: auto; */
+}
+
+/* h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+} */
+
+p {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.0em;
+    margin: auto;
+    /* overflow: hidden; */
+    /* border: solid orange; */
+}
+
+.voteDiv {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    min-height: 10%;
+}
+
+.upvote {
+    display: flex;
+    align-items: baseline;
+    width: 0;
+    height: auto;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-bottom: 2.5vh solid lightslategray;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 0%;
+}
+
+.downvote {
+    display: flex;
+    align-items: initial;
+    width: 0;
+    height: auto;
+    border-left: 2.5vh solid transparent;
+    border-right: 2.5vh solid transparent;
+    border-top: 2.5vh solid lightslategray;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 0;
+}
+
+.upvote.on {
+    border-bottom: 2.5vh solid orange;
+}
+
+.downvote.on {
+    border-top: 2.5vh solid mediumslateblue;
+}
+
+.count {
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.0em;
+    text-align: center;
+    /* margin: auto; */
+}
+
+/* ---------------------------------------------------
+    TOPIC
+----------------------------------------------------- */
+
+.topicBodyCard {
+    height: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 4%;
+}
+
+.commentContainer {
+    height: auto;
+}
+
+.commentHeader2 {
+    margin-top: 1%;
+    padding-left: 1.5%;
+    width: 100%;
+}
+
+.commentHeader2 > div {
+    display: inline-block;
+}
+
+.commentUsername {
+    font-size: 2.4vh;
+}
+
+/* .comment {
+    height: auto;
+} */
+
+.commentRow {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    border: solid orange;
+}
+
+.commentCard {
+    height: auto;
+    margin-bottom: 2%;
+}
+
+/* Comment Template 1 */
+.commentText1 {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 0;
+    padding: 1%;
+}
+
+.commentOptions1 {
+    margin: 0;
+    padding: 1%;
+    font-size: 1vh;
+}
+
+.commentButton1 {
+    margin-right: 2%;
+    font-weight: bold; 
+}
+
+/* Comment Template 2 */
+.commentText2 {
+    margin: 0;
+    padding: 1%;
+    padding-left: 1.5%;
+}
+
+.commentOptions1 {
+    background-color: cornflowerblue;
+    margin-left: 3%;
+}
+
+.commentOptions2 {
+    background-color: cornflowerblue;
+    margin: 0;
+    padding: 1%;
+    padding-left: 1.5%;
+    font-size: 1vh;
+}
+
+.commentButton2 {
+    margin-right: 2%;
+    padding: 0;
+    color: white;
+    font-weight: bold; 
+}
+
+.submitComment {
+    margin: 0;
+    padding: 0;
+}
+
+.submitCommentLabel {
+    background-color: #4B8AE5;
+    color: white;
+}
+
+.smallText {
+    display: inline-block;
+    font-size: 2vh;
+}
+
+/* ---------------------------------------------------
+    POPULAR SUBS VISUAL
+----------------------------------------------------- */
+
+.popularVisual {
+    border: solid blue;
+}
+
+.row {
+    height: 10%;
+}
+
+/* -----------------------------------------------------  
+Community Page 
+--------------------------------------------------------*/
+
+#communityDescription {
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
+}
+
+#communityRules {
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
+}
+
+#communityModerators {
+    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: solid #DDDDDD;
+    border-width: thin; */
+}
+
+.moderators {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#communityModeratorsBody {
+    padding-left: 3%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* #ruleDescription {
+    display: none;
+} */
+
+/* ---------------------------------------
+    USER HOMEPAGE
+---------------------------------------- */
+
+.h100{
+    height: 100%;
+    padding: 1%;
+}
+
+#userHomeContent{
+    height: 80%;
+    width: 80%;
+    top: 0;
+    left: 0;
+    margin: 7% 10% 10% 10%;
+    border-radius: 1%;
+    filter: drop-shadow(0 0 0.3rem rgb(90, 127, 231));
+}
+
+#userHome {
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: hidden; Enable scroll if needed */
+    background-color: rgb(64, 113, 185); /* Fallback color */
+    background-color: rgba(64, 113, 185,0.4); /* Black w/ opacity */
+    padding-top: 0;
+}
+#userInformation {
+    height: auto;
+    
+}
+#userInformation div div p{
+    font-weight: bold;
+}
+#userAvatarPlaceholder{
+    padding-top:25%;
+    padding-left: 25%;
+    transform: scale(2);
+}
+.modal#userHome{
+    display: initial;
+  }
+
+#userSideContent {
+    height: 100%;   
+    width: 100%;
+    padding: 2%;
+    background-color: #7386D5
+}
+#tpUL{
+    padding: 0;
+}
+li .topicList p{
+    width: 100%;
+    margin-top: 5%;
+    font-weight: bold;
+}
+#userMainContent {
+    height: 100%;
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+/* USER TABS */
+.userTabContent {
+    background: #fff;
+    color: #373737;
+    text-align:left;
+    border-top: 1px solid #D0D0D0;
+    height: auto; 
+    overflow-y: scroll;
+}
+
+.userTabContent > div {
+    display: none;
+    padding: 20px 25px 5px;
+}
+
+#userTab1, #userTab2, #userTab3, #userTab4, #userTab5{
+    display: none;
+}
+.userTabs{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.userTabsLabel {
+    display: inline-block;
+    padding: 2% 3%;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    width: auto;
+}
+
+.userTabsLabel:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
+#iconFriend:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
+input:checked + .userTabsLabel {
+    background: #B1C9EF;
+    color: #fff;
+}
+
+#userTab1:checked ~ .userTabContent #userBio,
+#userTab2:checked ~ .userTabContent #userProfile,
+#userTab3:checked ~ .userTabContent #userFriends,
+#userTab4:checked ~ .userTabContent #userFeedSettings, 
+#userTab5:checked ~ .userTabContent #userAccountSettings{
+  display: block;
+}
+
+@media screen and (max-width: 400px) { 
+    .userTabsLabel {padding: 15px 10px;} 
+    h5 {
+        transform: scale(.7)
+    }
+}
+
+#userPreferences {
+    position: absolute;
+    bottom: 0;
+}
+#userPreferencesButton {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+    text-align: left
+}
+#userPreferencesButton:hover {
+    transform: scale(1.1);
+    transform-origin: left;
+}
+/* Friends Tab */
+
+/* .buttonFriend {
+
+} */
+
+/*  Profile Tab */
+#userProfile{
+    height: auto;
+}
+#userProfileImages{
+    margin: 1% 0;
+}
+
+/* --------------------------------------------
+ Collapsible Button for Cards
+ ---------------------------------------------*/
+
+
+
+/* --------------------------------------------
+ Media
+ ---------------------------------------------*/
+
+/* Videos */
+#myVideo {
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+  }
+/* #loginOverlay {
+    opacity:    0.3; 
+    background: rgb(1, 27, 66); 
+    width:      100%;
+    height:     100%; 
+    z-index:    2;
+    top:        0; 
+    left:       0; 
+    position:   absolute; 
+  } */
+  .mediaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+  }
+.videoContainer {
+    width: 100%;
+}
+.headerOverlay1{ 
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+    filter: drop-shadow(0 0 0.05rem black);
+}
+.headerOverlay{ 
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    z-index: 3;
+    background-color: #4B8AE5;
+    filter: drop-shadow(0 0 0.05rem black);
+    color: white;
+}
+.footerOverlay1{
+    position: absolute;
+    bottom:0;
+    height: 9%;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+.footerOverlay{
+    position: absolute;
+    bottom:0;
+    height: 7%;
+    width: 100%;
+    z-index: 3;
+    background-color: #4B8AE5;
+    filter: drop-shadow(0 0 0.1rem black);
+}
+.videoContainer video {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px; /* fixed to left. Replace it by right if you want.*/
+    min-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* -------------------------------------------- */
+.colorPalette {
+    color: #D9E8FB;
+    color: #FEFEFE;
+    color: #4B8AE5;
+    color: #D0D0D0;
+    color: #878889;
+    color: #B1C9EF;
+}
+
+/* ---------------------------------------------
+    MODAL LOGIN/REGISTER
+-----------------------------------------------*/
+/* Center the image and position the close button */
+/* Extra styles for the cancel button */
+
+/* #loginPage {
+    height: 100%;
+    width: 100%;
+}
+
+#loginModal{
+    background-color: #4B8AE5;
+    color: white;
+    filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
+} */
+
+/* .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+} */
+  
+/* .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+  
+img.logo {
+    width: 40%;
+    border-radius: 50%;
+}
+  
+.mcontainer {
+    padding: 16px;
+}
+
+.mcontainer.row{
+    padding-top: 2px;
+} */
+
+#loginPage {
+    height: 100%;
+    width: 100%;
+}
+.mcontainer {
+    width: 70%;
+    margin: 0 auto;
+}
+#buttonLogin {
+    margin-top: 5%;
+    background-color: white;
+}
+#buttonLogin:hover {
+    color:#4B8AE5;
+}
+#modalLogin{
+    background-color: #4B8AE5;
+    color: white;
+    padding: 3%;
+    top: 30%;
+    left: 0;
+    margin: auto;
+    height: auto;
+    width: 50%;
+    filter: drop-shadow(0 0 0.3rem rgb(30, 69, 177));
+    z-index: 3;
+}
+#loginPasswordLabel, #loginUsernameLabel{
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+.logoNSlogan {
+    height: auto;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 100%;  
+    
+}
+.logoNSlogan p{
+    font-size: 1.2em;
+    display: inline;
+    margin-left: 30%;
+}
+.logoNSlogan a {
+    display: inline;
+}
+.logoNSlogan a img{
+    width: 12%;
+    height: auto;
+}
+
+#modalRegister {
+    background-color: white;
+    color: #4B8AE5;
+    padding: 3%;
+    top: 25%;
+    left: 0;
+    margin: auto;
+    height: auto;
+    width: 50%;
+    filter: drop-shadow(0 0 0.2rem #4B8AE5);
+    z-index: 3;
+}
+.regParams label {
+    margin-bottom:0;
+    margin-top: 2%
+}
+.loginRow {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* border: solid orange; */
+}
+
+span.forgotpsw {
+    float: right;
+    padding-top:2px;
+}
+  
+span.forgotusr {
+    float: right;
+}
+
+.mcontainer .row h5,
+.mcontainer .row a {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100%; 
+}
+.mcontainer .row a:hover{
+    transform: scale(1.2);
+}
+
+
+
+/* Modal Content/Box */
+
+/* .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: visible; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+} */
+/* .modal-content {
+    background-color: #fefefe;
+    width: 20%;
+    position: relative;
+    top: 20%;
+    left: 0;
+    margin: auto;
+    border: 1px solid #888;
+    z-index: 3;
+} */
+  
+  /* Close Button (x) */
+.close {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    margin: auto;
+}
+  
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.forgotpsw {
+       display: block;
+       float: none;
+    }
+    span.forgotusr {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+/* ---------------------------------------------
+    CREATE/DISCUSS TOPIC
+-----------------------------------------------*/
+
+#createTopic form div, #createTopic form button{
+    color: Grey;
+}
+
+#createTopic {
+    height: 100%;
+}
+
+.createTopicTabContent {
+    background: #fff;
+    color: #373737;
+    text-align:left;
+    height: 100%; 
+    overflow-y: scroll;
+} 
+
+.createTopicTabContent > div {
+    display: none;
+    padding: 20px 25px 5px;
+}
+
+#topicText, #topicMedia, #topicLink {
+    display: none;
+}
+.createTopicTab{
+    width: 100%;
+}
+.createTopicTabLabel {
+    display: inline-block;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    width: calc(100%  /3);
+    border-right: .5px solid #D0D0D0;
+    border-bottom: .5px solid #D0D0D0;
+    background-color: white;
+}
+
+#createTopicText form button:hover {
+    color: #4B8AE5;
+    border-bottom: 1px solid #4B8AE5;
+}
+
+.createTopicTabLabel:hover {
+    color: #4B8AE5;
+    cursor: pointer;
+}
+
+input:checked + .createTopicTabLabel {
+    background: #B1C9EF;
+    color: #fff;
+}
+
+#topicText:checked ~ .createTopicTabContent #createTopicText,
+#topicMedia:checked ~ .createTopicTabContent #createTopicMedia,
+#topicLink:checked ~ .createTopicTabContent #createTopicLink
+{
+  display: block;
+}
+
+@media screen and (max-width: 400px) {
+    .createTopicTabLabel {padding: 15px 10px;}
+
+}
+
+@media screen and (max-width: 600px){
+    #sidebarCollapse,#sideContent, #searchButton, #homeButton, #navbarMiddle{
+        display: none;
+    }
+    #mainContent {
+        display:block;
+    }
+    #userNavbarDropdownContainer{
+        float:right;
+    }
+}
+
+#createTopicHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#openModalDraft{
+    background-color: #D0D0D0;
+    color:white;
+    display: none
+}
+
+
+#modalDraft{
+    top: 20%;
+}
+.draftItem{
+    width: 100%;
+    border-top: 1px solid #D0D0D0;
+    border-bottom: 1px solid #D0D0D0;
+    padding: 5px;
+}
+#discussDraftModal{
+    display: inline-block;
+    width: auto;
+    
+}
+#discussTitle{
+    display: inline-block;
+    width: auto;  
+}
+
+#communySearchForm{
+    padding-top: 1%;
+    padding-bottom:1%;
+    border-top: 1px solid #D0D0D0;
+}
+#inputContainer{
+    position:relative;
+    padding:0;
+    margin:0;
+}
+#communitySearchInput{
+    width: 30%;
+}
+
+
+/* #iconDown{
+    position: absolute;
+    right: 10px;
+}
+#iconDown::before{
+    position: absolute;
+    right: 10px;
+} */
+
+/* TOPIC MEDIA START */
+
+/* .box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+} */
+
+.media {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mediaPreview {
+    width: 100%;
+    overflow: hidden;
+}
+
+.float-right {
+    float: right;
+    margin-right: 3%;
+}
+
+#createTopicMedia{
+    height: auto;
+    width: auto;
+}
+
+#mediaDrgDrpBox {
+    width: 1060px;
+    height: 200px;
+    border: 4px dashed #D0D0D0;
+}
+#mediaDrgDrpBox input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 1060px;
+    height: 200px;
+    outline: none;
+    opacity: 0;
+}
+#mediaDrgDrpBox label {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #D0D0D0;
+    font-family: Arial;
+}
+/* MEDIA QUERY FOR DRAG AND DROP BOX */
+@media screen and (max-width: 510px) {
+    #mediaDrgDrpBox {
+        width: 425px;
+        height: 200px;
+        border: 4px dashed #D0D0D0;
+    }
+    #mediaDrgDrpBox input{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 425px;
+        height: 200px;
+        outline: none;
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    #mediaDrgDrpBox {
+        transform: scale(.7);
+        border: 4px dashed #D0D0D0;
+    }
+    #mediaDrgDrpBox input{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        transform: scale(.7);
+        outline: none;
+        opacity: 0;
+    }
+}
+/* CREATE COMMUNITY PAGE */
+
+/* #createCommunityBackground {
+    position: absolute;
+    z-index: 0;
+    background-color: grey;
+    opacity: .6;
+    height: 100%;
+    width: 100%;
+} */
+#createCommunityBody {
+    height: 100%;
+    width: 100%;   
+    margin: 0;
+    padding: 0;
+}
+#createCommunityContainer{
+    margin-top: 2%;
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    padding: 0;
+    border: 1px solid #D0D0D0;
+    border-radius: 15px;
+    filter: drop-shadow(1px 1px 2px #444444);
+}
+#createCommunityHeader{
+    border-bottom: 1px solid #D0D0D0;
+}
+#createCommunitySide{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(#5680E9, #84CEEB, rgb(158, 232, 255), white,#5AB9EA, #C1C8E4, #8860D0);
+    border-radius: 15px 0px 0px 15px;
+}
+#createCommunitySide .row{
+    height: 100%;
+    width: 100%;
+}  
+#createCommunityMain{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #D0D0D0;
+}
+#createCommunityNameSection label{
+    padding-top: 1.5%;
+}
+#createCommunityNameSection label, #createCommunityNameSection input {
+    width: 100%;
+    margin: 0;
+}
+#createCommunityNameSection input{
+    background-color: rgb(243, 241, 241)
+}
+#createCommunityHeader h5 {
+    height: 100%;
+    padding: 1%;
+    padding-top: 2%;
+}
+#createCommunityNameSection p, #createCommunityDescriptionSection p{
+    padding-top: 1.5%;
+    font-weight: 400;
+    color: rgb(175, 175, 175);
+}
+#createCommunityDescriptionSection label {
+    width: 100%;
+    padding-top: 1.5%;
+    margin:0;
+    
+}
+#createCommunityDescriptionSection textarea {
+    background-color: rgb(243, 241, 241);
+}
+
+#createCommunityTypeSection label span, #createCommunityTypeSection label i, #createCommunityCheckAdultSection div label i {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+#createCommunityTypeSection {
+    padding-top: 2%;
+}
+#createCommunityTypeSection label {
+    margin: 0;
+    width: 50%;
+}
+#createCommunityTypeSection p {
+    margin-left: 55px;
+    padding-bottom: 1.5%;
+    color: rgb(175, 175, 175);
+}
+#createCommunityTypeSection div {
+    padding-bottom: 1.5%;
+}
+#createCommunityCheckAdultSection div label {
+    width: 100%;
+}
+#createCommunityCheckAdultSection div label h6{
+    display: inline-block
+}
+#createCommunityCheckAdultSection div label i {
+    /* border-radius: 50%; */
+    display: inline-block;
+    color:red;
+}
+#createCommunityButton input, #createCommunityButton button{
+    /* float: right; */
+    margin-top: 4%;
+    margin-right: 1.5%;
+    margin-bottom: 4%;
+    background-color: #4B8AE5;
+    color: white;   
+}
+#createCommunityButton input:hover , #createCommunityButton button:hover {
+    color: #5AB9EA;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+#createCommunitySideBackground{
+    background: url('../media/logoTrans.png');
+    background-size: contain;
+    top: 35%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    
+}

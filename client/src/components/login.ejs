@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <!-- Background Overlay Starts -->
+   <div class="videoContainer">
+        <div class="headerOverlay">
+            <div class="logoNSlogan">
+                <a href="/"><img src="/media/logoTrans.png" alt="Trender" class="logo"></a>
+                <p>Set tomorrow's trends today.</p>
+            </div>
+        </div>
+        <div class="mediaOverlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="/media/background.mp4" type="video/mp4">
+        </video>
+        <div class="footerOverlay"></div>
+   </div>
+    <!-- End of Background Overlay -->
+    
+    <!-- Login Modal Starts -->
+    <div class="container-fluid" style="width: 100%">
+        <div class="col-sm-12 m-0 p-0" style="height:90vh; background-color: #FEFEFE">
+            <form class="modal-content animate" action="/login" method="POST" id="modalLogin">
+                <div class="mcontainer">
+                    <div class="row">
+                        <h4 style="font-weight: bold; padding:10px;margin: auto auto;"><u><%= pageTitle %></u></h4>
+                        <a name="login" id="redirectLogin" class="btn" href="/register" role="button" style="font-weight:bold;font-size: 20px;margin-left: 30%;margin: auto auto">Register</a>
+                    </div>
+                    <div class="row">
+                        <label for="username" id="loginUsernameLabel"><b>Username</b></label>
+                        <input class="form-control mr-sm-2" type="text" oninvalid="this.setCustomValidity('Please enter a valid username.')" placeholder="Enter Username" name="username" required>
+                    </div>
+                    <div class="row">
+                        <label for="password" id="loginPasswordLabel"><b>Password</b></label>
+                        <input class="form-control mr-sm-2" type="password" oninvalid="this.setCustomValidity('Please enter a valid password.')" placeholder="Enter Password" name="password" required>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-light" type="submit" id="buttonLogin">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End of Login Modal -->
+
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
+</body>
+
+</html>

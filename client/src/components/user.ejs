@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+    <% include partials/sidebar.ejs %>
+    <% include partials/navbar.ejs %>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="userHome">
+                <div class="modal-content" id="userHomeContent">
+                    <div class="row" style="height: 100%">
+                        <div class="col-3 p-0">
+                            <div id="userSideContent">
+                                <div class="row" style="height: auto; margin-left: 3%">
+                                    <h4>Trender</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 d-inline-block" id="userAvatar">
+                                        <!-- <img src="" alt="" class="avatar"> -->
+                                        <i class="fas fa-user" id="userAvatarPlaceholder"></i>
+                                    </div>
+                                    <div class="col-8 d-inline-block" id="userInformation">
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
+                                            <div class="col-12">
+                                                <p><%= username%></p>
+                                            </div>
+                                        </div>
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
+                                            <div class="col-12">
+                                                <p>Email:<%= email%></p>
+                                            </div>
+                                        </div>
+                                        <div class="row d-inline-block" style=" width: auto;font-weight:bolder">
+                                            <div class="col-12">
+                                                <p>Last Login:</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row " style="height: auto; margin-top: 5%; margin-left: 3%">
+                                    <h5 style="margin:0">General</h5>
+                                </div>
+                                <div class="row" style="height: auto">
+                                    <div class="col-12">
+                                        <ul style="list-style-type: none; width: 100%;" id="tpUL" >
+                                            <li><a href="#" class="topicList" id="topicNew"><p>New</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicRecent"><p>Recent</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicTrending"><p>Trending</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicSketchy"><p>Sketchy</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicFunny"><p>Funny</p></a></li>
+                                            <li><a href="#" class="topicList" id="topicSad"><p>Sad</p></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row" id="userPreferences">
+                                    <div class="col-12">
+                                        <button type="button" onclick="" id="userPreferencesButton"><h6>PREFERENCES</h6><i class="fas fa-user"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 m-0 p-0" style="height: 100%;">
+                            <div id="userMainContent">
+                                <input class="userTabs" id="userTab1" type="radio" name="tabs" checked="" name="tabs">
+                                <label class="userTabsLabel" for="userTab1">Bio</label>
+                                
+                                <input class="userTabs" id="userTab2" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab2">Profile</label>
+                                
+                                <input class="userTabs" id="userTab3" type="radio" name="tabs" >
+                                <label class="userTabsLabel" for="userTab3">Friends</label>
+                                
+                                <input class="userTabs" id="userTab4" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab4">Feed</label>
+
+                                <input class="userTabs" id="userTab5" type="radio" name="tabs">
+                                <label class="userTabsLabel" for="userTab5">Account</label>
+                                
+                                <div class="userTabContent" >
+                                    <div id="userBio">
+                                        <p>
+                                        This area will contain the username bio.
+                                        </p>
+                                    </div>
+                                    <div id="userProfile"> 
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h5>Customize Profile</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12" id="userProfileInformation">
+                                                <h6>Profile Information</h6>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h6>Display Name (Optional)</h6>
+                                                        <p>Set a display name. This does not change your username.</p>                                                            </p>
+                                                        <input type="text" name="displayName" id="displayName" maxlength="20" style="margin: 1% "/>
+                                                        <label for="displayName" style="width: 100%;font-size: 1em;">20 characters left</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12" id="userProfileImages">
+                                               <h6>Profile Images</h6> 
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12" id="userProfileCategory">
+                                                <h6>Profile Category</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12" id="userProfileAdvanced">
+                                                <h6>Advanced</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div id="userFriends">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <div class="row">
+                                                        <div class="col-4"><span class="oi oi-people"></span></div>
+                                                        <div class="col-8"><a href=# id="iconFriend">Friends</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="buttonFriend btn"><a role="button" href="#">Friend Requests</a></span>
+                                                            <span class="buttonFriend btn"><a role="button" href="#"><span class="oi oi-plus"></span>Find Friends</a></span>
+                                                        </div>
+                                                        <div class="col-3"><button style="background-color:transparent; border:none"><span class="oi oi-wrench" id="buttonFriend"></span></button></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div id="userFeedSettings">
+                                        <div class="row"><div class="col-12"><h5>Feed Settings</h5></div></div>
+                                        <div class="row" style="height:100%">
+                                            <div class="col-6">MEDIA OPTIONS</div>
+                                            <div class="col-6">COMMENT OPTIONS</div>
+                                        </div>
+                                        <div class="row" style="height:100%">
+                                            <div class="col-6">LINK OPTIONS</div>
+                                            <div class="col-6">MESSAGING OPTIONS</div>
+                                        </div>
+                                    </div>
+                                    <div id="userAccountSettings">
+                                        <div class="row"><div class="col-12"><h5>Account Settings</h5></div></div>
+                                        <div class="row" style="height:100%">
+                                            <div class="col-6">ACCOUNT PREFERENCES</div>
+                                            <div class="col-6">CONNECT ACCOUNTS</div>
+                                        </div>
+                                        <div class="row" style="height:100%">
+                                            <div class="col-6">BETA TEST</div>
+                                            <div class="col-6">DEACTIVATE ACCOUNT</div>
+                                        </div>
+                                    </div>
+                                </div>                 
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include partials/cdn.ejs %>
+    <% include partials/functions.ejs %>
+</body>
+</html>
